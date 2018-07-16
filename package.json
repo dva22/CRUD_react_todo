@@ -1,0 +1,15 @@
+{
+  "name": "CRUD_react_todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "babel-node -- server/indexDev.js",
+    "build": "webpack --mode production",
+    "server": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dubchak Valery (dva@farma.amur.ru)",
+  "license": "ISC"
+}
