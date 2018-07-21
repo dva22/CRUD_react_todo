@@ -6,6 +6,9 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware, compose} from 'redux';
 import rootReducer from './rootReducer';
 import thunk from 'redux-thunk';
+import setAuthorizationToken from './utils/setAuthorizationToken';
+import {setCurrentUser} from './actions/authActions';
+import jwtDecode from 'jwt-decode';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -22,6 +25,11 @@ const store = createStore(
     )
 
 );
+
+if (localStorage.jwtToken) {
+    setAuthorizationToken(localStorage.jwtToken);
+    store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)));
+}
 
 render(
     <Provider store={store}>

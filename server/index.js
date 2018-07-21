@@ -1,21 +1,22 @@
 const express =  require('express');
 const path =  require('path');
 const bodyParser  =  require('body-parser');
-//const users =  require('./routes/users');
-const db = require('./db')
-//const auth = require('./routes/auth');
-//const comments = require('./routes/comments');
+const db = require('./db');
+
+const auth = require('./routes/auth');
+const notes = require('./routes/notes');
+const users =  require('./routes/users');
 
 
 
 let app = express();
 
 app.use(bodyParser.json());
-/*
+
 app.use('/api/users', users);
 app.use('/api/auth', auth);
-app.use('/api/comments', comments);
-*/
+app.use('/api/notes', notes);
+
 app.use(express.static(__dirname + '/public'));
 
 app.get('/*', (req, res) => {
