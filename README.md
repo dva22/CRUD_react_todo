@@ -22,11 +22,11 @@ shema app
 frontend 
 react components:
 app
--NavigationBar
--UsersNotes
---ModalWindow
----Note
---Table
+- NavigationBar
+- UsersNotes
+-- ModalWindow
+--- Note
+-- Table
 
  
  Install
