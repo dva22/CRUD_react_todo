@@ -2,7 +2,7 @@ Directory Structure
  -------------------
 
        client/                      - frontend
-       server/						- backend
+       server/                      - backend
        server/public/index.js       - entry point
        
 
