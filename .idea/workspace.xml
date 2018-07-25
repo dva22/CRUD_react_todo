@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1348a96e-ca8f-484b-b6d5-f0ef103ca5a9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/AddNote/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/AddNote/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ModalWindow/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ModalWindow/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/UsersNotes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/UsersNotes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/login/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/login/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/signup/SignupForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/signup/SignupForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/notes" beforeDir="false" afterPath="$PROJECT_DIR$/user/notes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/users" beforeDir="false" afterPath="$PROJECT_DIR$/user/users" afterDir="false" />
-    </list>
+    <list default="true" id="1348a96e-ca8f-484b-b6d5-f0ef103ca5a9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -207,7 +196,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="322" />
-    <option name="y" value="44" />
+    <option name="y" value="39" />
     <option name="width" value="1074" />
     <option name="height" value="1011" />
   </component>
@@ -347,18 +336,17 @@
       <option name="presentableId" value="Default" />
       <updated>1531738468373</updated>
       <workItem from="1531738471812" duration="55698000" />
-      <workItem from="1532397927710" duration="9710000" />
+      <workItem from="1532397927710" duration="10353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65408000" />
+    <option name="totallyTimeSpent" value="66051000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="322" y="44" width="1074" height="1011" extended-state="0" />
-    <editor active="true" />
+    <frame x="322" y="39" width="1074" height="1011" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -366,7 +354,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21624714" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21624714" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
