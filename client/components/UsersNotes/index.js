@@ -5,7 +5,7 @@ import 'moment/locale/ru';
 import loadNotesUsers from '../../utils/loadNotesUsers';
 import Table from '../Table/index';
 import ModalWindow from '../ModalWindow';
-import Note from "../AddNote/index";
+import AddNote from "../AddNote/index";
 
 class UsersNotes extends Component {
 
@@ -68,7 +68,7 @@ class UsersNotes extends Component {
             <div>
                 <ModalWindow
                     value = 'Новая заметка'
-                    component = {Note}
+                    component = {AddNote}
                     onSubmit = {this.loadNotesUsers}
                 />
                 <Table
