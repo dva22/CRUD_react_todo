@@ -44,3 +44,11 @@ Install components (need NPM from Node.js)
 execute server http://127.0.0.1:3000/
 
 > npm run server
+
+user is not login
+-------------------
+![alt text](userNotLogin.jpg)
+
+user is login
+-------------------
+![alt text](userLogin.jpg)
