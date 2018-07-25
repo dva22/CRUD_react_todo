@@ -1,16 +1,32 @@
 Directory Structure
  -------------------
 
-       client/                      - source files
-       client/index.js              - entry point
-       public/                      - generate React files
+       client/                      - frontend
+       server/						- backend
+       server/public/index.js       - entry point
+       
 
  Stack
  -------------------
+frontend
+- [React]
+- [redux]
+backend 
+- [express]
+- [tingodb]
+or
+- [mongodb]
 
-- [React](https://reactjs.org/)
-- [Webpack](https://webpack.js.org/)
+shema app
 
+frontend 
+react components:
+app
+-NavigationBar
+-UsersNotes
+--ModalWindow
+---Note
+--Table
 
  
  Install
@@ -18,12 +34,12 @@ Directory Structure
 
 Clone repo in your directory
 
-> git clone https://github.com/dva22/React-todo.git .
+> git clone https://github.com/dva22/CRUD_react_todo.git
 
 Install components (need NPM from Node.js)
 
-> npm i
+> npm i --production
 
-Generate files in public/  
+execute server http://127.0.0.1:3000/
 
-> webpack
+> npm run serner
