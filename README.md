@@ -11,10 +11,13 @@ Directory Structure
 frontend
 - [React]
 - [redux]
+
 backend 
 - [express]
 - [tingodb]
+
 or
+
 - [mongodb]
 
 shema app
