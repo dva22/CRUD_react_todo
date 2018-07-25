@@ -2,7 +2,7 @@ Directory Structure
  -------------------
 
        client/                      - frontend
-       server/						- backend
+       server/                      - backend
        server/public/index.js       - entry point
        
 
@@ -17,12 +17,11 @@ backend
 - [tingodb]
 
 or
-
 - [mongodb]
 
 shema app frontend 
 -------------------
-
+![alt text](shema.jpg)
 
 shema app backend 
 -------------------
@@ -44,4 +43,4 @@ Install components (need NPM from Node.js)
 
 execute server http://127.0.0.1:3000/
 
-> npm run serner
+> npm run server
