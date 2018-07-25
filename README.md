@@ -17,12 +17,11 @@ backend
 - [tingodb]
 
 or
-
 - [mongodb]
 
 shema app frontend 
 -------------------
-
+![alt text](shema.jpg)
 
 shema app backend 
 -------------------
