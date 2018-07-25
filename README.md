@@ -7,7 +7,7 @@ Directory Structure
        
 
  Stack
- -------------------
+-------------------
 frontend
 - [React]
 - [redux]
@@ -18,15 +18,16 @@ or
 - [mongodb]
 
 shema app
+-------------------
 
 frontend 
 react components:
 app
 - NavigationBar
 - UsersNotes
--- ModalWindow
---- Note
--- Table
+- - ModalWindow
+- - - Note
+- - Table
 
  
  Install
