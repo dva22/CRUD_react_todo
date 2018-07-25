@@ -52,13 +52,16 @@ class NoteForm extends React.Component {
                 .then(
                     (res) => {
                         this.props.taggle();
+                        this.props.onSubmit();
                         this.context.router.history.push('/')
                     }
                 )
                 .catch(err => {
                     let error = '';
                     if (err.response) {
-                        error = err.response.request.responseURL +
+                        if (err.response.data.error)
+                            error += ' ' + err.response.data.error;
+                        error += ' ' + err.response.request.responseURL +
                             ' ' +
                             err.response.status +
                             ' ' +
@@ -165,7 +168,8 @@ class NoteForm extends React.Component {
 }
 
 NoteForm.propTypes = {
-    auth: PropTypes.object.isRequired
+    auth: PropTypes.object.isRequired,
+    taggle: PropTypes.func.isRequired
 };
 
 function mapStateToProps(state) {

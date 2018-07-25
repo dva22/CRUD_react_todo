@@ -13,7 +13,8 @@ class SignupForm extends React.Component {
             errors: {
                 username: '',
                 password: '',
-                passwordConfirmation: ''
+                passwordConfirmation: '',
+                onSubmit: ''
             },
             isDisabledButtonLogin: false
         };
@@ -45,7 +46,8 @@ class SignupForm extends React.Component {
                 errors: {
                     username: '',
                     password: '',
-                    passwordConfirmation: ''
+                    passwordConfirmation: '',
+                    onSubmit: ''
                 },
                 isDisabledButtonLogin: true
             });
@@ -57,7 +59,9 @@ class SignupForm extends React.Component {
                 .catch(err => {
                     let error = '';
                     if (err.response) {
-                        error = err.response.request.responseURL +
+                        if (err.response.data.error)
+                            error += ' ' + err.response.data.error;
+                        error += ' ' + err.response.request.responseURL +
                             ' ' +
                             err.response.status +
                             ' ' +
@@ -68,9 +72,10 @@ class SignupForm extends React.Component {
 
                     this.setState({
                         errors:{
-                            username: error,
+                            username: '',
                             password: '',
-                            passwordConfirmation: ''
+                            passwordConfirmation: '',
+                            onSubmit: error
                         }
                     })
                 });
@@ -89,6 +94,7 @@ class SignupForm extends React.Component {
         let isDisabledButtonLogin = false;
         Object.assign(state, this.state);
         state[e.target.name] = e.target.value;
+        state.errors['onSubmit'] = '';
 
         const {errors, isValid} = validateInput(e.target.name, state);
 
@@ -158,6 +164,12 @@ class SignupForm extends React.Component {
                     </div>
                 </div>
 
+                <label
+                    hidden
+                    className={this.getClassName("onSubmit")}/>
+                <div className="invalid-feedback">
+                    {errors["onSubmit"]}
+                </div>
 
                 <button
                     type="submit"

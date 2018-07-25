@@ -12,7 +12,8 @@ class LoginForm extends React.Component {
             password: '',
             errors: {
                 identifier: '',
-                password: ''
+                password: '',
+                onSubmit: ''
             },
             isDisabledButtonLogin: false
         };
@@ -43,7 +44,8 @@ class LoginForm extends React.Component {
             this.setState({
                 errors: {
                     identifier: '',
-                    password: ''
+                    password: '',
+                    onSubmit: ''
                 },
                 isDisabledButtonLogin: true
             });
@@ -55,7 +57,9 @@ class LoginForm extends React.Component {
                 .catch(err => {
                     let error = '';
                     if (err.response) {
-                        error = err.response.request.responseURL +
+                        if (err.response.data.error)
+                            error += ' ' + err.response.data.error;
+                        error += ' ' + err.response.request.responseURL +
                             ' ' +
                             err.response.status +
                             ' ' +
@@ -65,10 +69,13 @@ class LoginForm extends React.Component {
                     }
 
                     this.setState(
-                        {errors:
-                            {identifier: error,
-                             password: ''
-                            }
+                        {
+                            errors:
+                                {
+                                    identifier: '',
+                                    password: '',
+                                    onSubmit: error
+                                }
                         }
                     )
                 });
@@ -88,6 +95,7 @@ class LoginForm extends React.Component {
         let isDisabledButtonLogin = false;
         Object.assign(state, this.state);
         state[e.target.name] = e.target.value;
+        state.errors['onSubmit'] = '';
 
         const {errors, isValid} = validateInput(e.target.name, state);
 
@@ -143,12 +151,20 @@ class LoginForm extends React.Component {
                     </div>
                 </div>
 
+                <label
+                    hidden
+                    className={this.getClassName("onSubmit")}/>
+                <div className="invalid-feedback">
+                    {errors["onSubmit"]}
+                </div>
 
                 <button
                     type="submit"
                     className="btn btn-primary"
                     disabled={isDisabledButtonLogin}>Submit
                 </button>
+
+
 
             </form>
         )

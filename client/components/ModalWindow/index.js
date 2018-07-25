@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Button, Modal, ModalHeader, ModalBody} from 'reactstrap';
+import PropTypes from 'prop-types';
 
 class ModalWindow extends React.Component {
     constructor(props) {
@@ -8,7 +9,6 @@ class ModalWindow extends React.Component {
         this.state = {
             modal: false
         };
-
 
         this.toggle = this.toggle.bind(this);
     }
@@ -30,7 +30,10 @@ class ModalWindow extends React.Component {
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>{this.props.value}</ModalHeader>
                     <ModalBody>
-                        <this.props.component taggle={this.toggle}/>
+                        <this.props.component
+                            taggle={this.toggle}
+                            onSubmit = {this.props.onSubmit}
+                        />
                     </ModalBody>
                 </Modal>
             </div>
@@ -43,5 +46,11 @@ function mapStateToProps(state) {
         auth: state.auth
     };
 }
+
+ModalWindow.propTypes = {
+    value: PropTypes.string.isRequired,
+    component: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired
+};
 
 export default connect(mapStateToProps)(ModalWindow);
