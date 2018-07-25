@@ -20,17 +20,15 @@ or
 
 - [mongodb]
 
-shema app
+shema app frontend 
 -------------------
 
-frontend 
-react components:
-app
-- NavigationBar
-- UsersNotes
-- - ModalWindow
-- - - Note
-- - Table
+
+shema app backend 
+-------------------
+- /api/users
+- /api/auth
+- /api/notes
 
  
  Install
